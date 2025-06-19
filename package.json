@@ -9,6 +9,14 @@
   },
   "author": "Quang Duong Dinh",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duongquang1611/gemini-rn-icon.git"
+  },
+  "homepage": "https://github.com/duongquang1611/gemini-rn-icon#readme",
+  "bugs": {
+    "url": "https://github.com/duongquang1611/gemini-rn-icon/issues"
+  },
   "keywords": [
     "react-native",
     "icon",
@@ -21,11 +29,27 @@
     "rn"
   ],
   "scripts": {
-    "start": "node ./bin/index.mjs"
+    "start": "node ./bin/index.mjs",
+    "prepublishOnly": "yarn test",
+    "test": "echo \"No tests specified\" && exit 0",
+    "view": "npm view gemini-rn-icon",
+    "check-package": "npm pack --dry-run",
+    "publish": "npm publish",
+    "increment-patch": "npm version patch",
+    "increment-minor": "npm version minor",
+    "increment-major": "npm version major"
   },
   "dependencies": {
     "chalk": "^5.3.0",
     "inquirer": "^9.2.0",
     "sharp": "^0.33.0"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ]
 }
