@@ -1,0 +1,31 @@
+{
+  "name": "gemini-rn-icon",
+  "version": "1.0.0",
+  "description": "CLI tool to generate and apply app icons for React Native Android and iOS projects",
+  "type": "module",
+  "main": "bin/index.mjs",
+  "bin": {
+    "gemini-rn-icon": "./bin/index.mjs"
+  },
+  "author": "Quang Duong Dinh",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "icon",
+    "app icon",
+    "ios",
+    "android",
+    "cli",
+    "tool",
+    "gemini",
+    "rn"
+  ],
+  "scripts": {
+    "start": "node ./bin/index.mjs"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.0",
+    "sharp": "^0.33.0"
+  }
+}
