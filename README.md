@@ -1,14 +1,19 @@
 # gemini-rn-icon
 
+[![npm version](https://badge.fury.io/js/gemini-rn-icon.svg)](https://badge.fury.io/js/gemini-rn-icon)
+[![npm downloads](https://img.shields.io/npm/dm/gemini-rn-icon.svg)](https://www.npmjs.com/package/gemini-rn-icon)
+
 🎯 A CLI tool to generate and apply React Native app icons automatically for both Android and iOS platforms.
 
 🛠️ Công cụ CLI để tạo và áp dụng icon ứng dụng React Native tự động cho cả Android và iOS.
 
-## 🚀 Install / Cài đặt
+## 📦 Install / Cài đặt
 
 ```bash
 npm install -g gemini-rn-icon
 ```
+
+**📥 Download from npm:** [https://www.npmjs.com/package/gemini-rn-icon](https://www.npmjs.com/package/gemini-rn-icon)
 
 ## 📖 Usage / Cách sử dụng
 

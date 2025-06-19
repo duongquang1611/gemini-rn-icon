@@ -1,6 +1,6 @@
 {
   "name": "gemini-rn-icon",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "CLI tool to generate and apply app icons for React Native Android and iOS projects",
   "type": "module",
   "main": "bin/index.mjs",
@@ -37,7 +37,8 @@
     "publish": "npm publish",
     "increment-patch": "npm version patch",
     "increment-minor": "npm version minor",
-    "increment-major": "npm version major"
+    "increment-major": "npm version major",
+    "no-verify": "git add . && git commit --amend --no-edit --no-verify && git push origin HEAD -f"
   },
   "dependencies": {
     "chalk": "^5.3.0",
