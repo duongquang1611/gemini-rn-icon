@@ -9,11 +9,57 @@
 
 ## 📦 Install / Cài đặt
 
+## ♻️ Update / Nâng cấp phiên bản mới nhất
+
+**🇬🇧 Update to the latest version:**
+If you already installed the library and want to update to the latest version, use one of the following commands:
+
+### Global installation:
+
 ```bash
 npm install -g gemini-rn-icon
+# or
+npm update -g gemini-rn-icon
 ```
 
-**📥 Download from npm:** [https://www.npmjs.com/package/gemini-rn-icon](https://www.npmjs.com/package/gemini-rn-icon)
+### Local installation (in your project):
+
+```bash
+npm install gemini-rn-icon@latest
+# or
+npm update gemini-rn-icon
+```
+
+**If you use npx:**
+
+- Just run `npx gemini-rn-icon`, npm will always fetch the latest version!
+
+---
+
+**🇻🇳 Nâng cấp lên phiên bản mới nhất:**
+Nếu bạn đã cài thư viện và muốn cập nhật lên bản mới nhất, hãy dùng một trong các lệnh sau:
+
+### Cài đặt toàn cục (global):
+
+```bash
+npm install -g gemini-rn-icon
+# hoặc
+npm update -g gemini-rn-icon
+```
+
+### Cài đặt cục bộ (trong project):
+
+```bash
+npm install gemini-rn-icon@latest
+# hoặc
+npm update gemini-rn-icon
+```
+
+**Nếu bạn dùng npx:**
+
+- Chỉ cần chạy `npx gemini-rn-icon`, npm sẽ tự động lấy bản mới nhất!
+
+---
 
 ## 📖 Usage / Cách sử dụng
 

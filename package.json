@@ -1,7 +1,7 @@
 {
   "name": "gemini-rn-icon",
-  "version": "1.0.4",
-  "description": "CLI tool to generate and apply app icons for React Native Android and iOS projects",
+  "version": "1.0.5",
+  "description": "CLI tool to generate and apply app icons for React Native Android and iOS projects (including round icons for Android)",
   "type": "module",
   "main": "bin/index.mjs",
   "bin": {

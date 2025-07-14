@@ -50,6 +50,11 @@ const androidIconSpecs = [
   { name: "mipmap-xhdpi/ic_launcher.png", size: 96 },
   { name: "mipmap-xxhdpi/ic_launcher.png", size: 144 },
   { name: "mipmap-xxxhdpi/ic_launcher.png", size: 192 },
+  { name: "mipmap-mdpi/ic_launcher_round.png", size: 48 },
+  { name: "mipmap-hdpi/ic_launcher_round.png", size: 72 },
+  { name: "mipmap-xhdpi/ic_launcher_round.png", size: 96 },
+  { name: "mipmap-xxhdpi/ic_launcher_round.png", size: 144 },
+  { name: "mipmap-xxxhdpi/ic_launcher_round.png", size: 192 },
 ];
 
 function getProjectName() {
@@ -130,9 +135,33 @@ async function main() {
     const outputPath = path.join(androidOutputFolder, icon.name);
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     try {
-      await sharp(inputPath)
-        .resize(icon.size, icon.size, { fit: "cover" })
-        .toFile(outputPath);
+      let sharpInstance = sharp(inputPath).resize(icon.size, icon.size, {
+        fit: "cover",
+      });
+
+      // Tạo icon round nếu tên file chứa "_round"
+      if (icon.name.includes("_round")) {
+        // Tạo icon tròn bằng cách sử dụng sharp với mask đơn giản
+        const circleSvg = `
+          <svg width="${icon.size}" height="${icon.size}">
+            <circle cx="${icon.size / 2}" cy="${icon.size / 2}" r="${
+          icon.size / 2
+        }" fill="white"/>
+          </svg>
+        `;
+
+        // Tạo mask trắng với hình tròn
+        const mask = await sharp(Buffer.from(circleSvg)).png().toBuffer();
+
+        sharpInstance = sharpInstance.composite([
+          {
+            input: mask,
+            blend: "dest-in",
+          },
+        ]);
+      }
+
+      await sharpInstance.toFile(outputPath);
       console.log(chalk.green(`✅ Created Android: ${icon.name}`));
     } catch (err) {
       console.log(
@@ -154,8 +183,12 @@ async function main() {
         "\n📦 Đã apply icon vào project React Native (iOS + Android)."
       )
     );
+    console.log(chalk.blue("📱 Android: ic_launcher + ic_launcher_round"));
+    console.log(chalk.blue("🍎 iOS: AppIcon.appiconset"));
   } else {
     console.log(chalk.green("\n📁 Icon đã được tạo trong thư mục app-icons."));
+    console.log(chalk.blue("📱 Android: ic_launcher + ic_launcher_round"));
+    console.log(chalk.blue("🍎 iOS: AppIcon.appiconset"));
   }
 
   console.log(chalk.cyan("\n🎉 Hoàn tất!"));
