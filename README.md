@@ -121,6 +121,47 @@ The tool generates all required Android icon sizes:
 - xxhdpi: 144x144
 - xxxhdpi: 192x192
 
+## ⚠️ Requirements / Yêu cầu
+
+- Node.js 14+ / Node.js 14 trở lên
+- React Native project with iOS and Android folders / Project React Native có thư mục iOS và Android
+- Square image file (PNG, JPG, JPEG) / File ảnh vuông (PNG, JPG, JPEG)
+
+## 🔧 Troubleshooting / Xử lý sự cố
+
+### Common Issues / Vấn đề thường gặp
+
+1. **"File không tồn tại" / "File does not exist"**
+
+   - Check the file path is correct / Kiểm tra đường dẫn file có đúng không
+   - Use absolute path if needed / Sử dụng đường dẫn tuyệt đối nếu cần
+
+2. **"Failed to create icon" / "Không thể tạo icon"**
+
+   - Ensure the image is square (1:1 ratio) / Đảm bảo ảnh vuông (tỷ lệ 1:1)
+   - Check image format is supported / Kiểm tra định dạng ảnh được hỗ trợ
+
+3. **Auto-apply not working / Tự động áp dụng không hoạt động**
+   - Ensure you're in a React Native project root / Đảm bảo bạn đang ở thư mục gốc project React Native
+   - Check iOS and Android folders exist / Kiểm tra thư mục iOS và Android có tồn tại
+
+## ☕ Donate and Support / Ủng hộ và Hỗ trợ
+
+**🇬🇧 If you find this tool helpful, please consider supporting the development:**
+
+[![Buy Me a Coffee](https://camo.githubusercontent.com/0d22f79f7bfe5b669801ed5d2d2b5883c3547d3b85671aba9d8ca7a8eadba22e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f40696e746572677261762f646576696e732d62616467657340332f6173736574732f636f7a792f646f6e6174652f6275796d6561636f666665652d73696e67756c61725f766563746f722e737667)](https://buymeacoffee.com/duongquangi)
+
+**🇻🇳 Nếu bạn thấy công cụ này hữu ích, hãy cân nhắc ủng hộ phát triển:**
+
+[![Buy Me a Coffee](https://camo.githubusercontent.com/0d22f79f7bfe5b669801ed5d2d2b5883c3547d3b85671aba9d8ca7a8eadba22e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f40696e746572677261762f646576696e732d62616467657340332f6173736574732f636f7a792f646f6e6174652f6275796d6561636f666665652d73696e67756c61725f766563746f722e737667)](https://buymeacoffee.com/duongquangi)
+
+### MOMO or Vietnamese banking
+
+ <p float="left">        
+ <img src="/assets/momo-duongdinhquang.jpeg" width="300"> 
+ </p>
+
+
 ## 🏗️ Project Structure / Cấu trúc dự án
 
 ```
@@ -154,29 +195,7 @@ your-react-native-project/
                         └── ic_launcher.png
 ```
 
-## ⚠️ Requirements / Yêu cầu
-
-- Node.js 14+ / Node.js 14 trở lên
-- React Native project with iOS and Android folders / Project React Native có thư mục iOS và Android
-- Square image file (PNG, JPG, JPEG) / File ảnh vuông (PNG, JPG, JPEG)
-
-## 🔧 Troubleshooting / Xử lý sự cố
-
-### Common Issues / Vấn đề thường gặp
-
-1. **"File không tồn tại" / "File does not exist"**
-
-   - Check the file path is correct / Kiểm tra đường dẫn file có đúng không
-   - Use absolute path if needed / Sử dụng đường dẫn tuyệt đối nếu cần
-
-2. **"Failed to create icon" / "Không thể tạo icon"**
-
-   - Ensure the image is square (1:1 ratio) / Đảm bảo ảnh vuông (tỷ lệ 1:1)
-   - Check image format is supported / Kiểm tra định dạng ảnh được hỗ trợ
-
-3. **Auto-apply not working / Tự động áp dụng không hoạt động**
-   - Ensure you're in a React Native project root / Đảm bảo bạn đang ở thư mục gốc project React Native
-   - Check iOS and Android folders exist / Kiểm tra thư mục iOS và Android có tồn tại
+---
 
 ## 📄 License / Giấy phép
 
